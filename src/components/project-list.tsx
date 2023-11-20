@@ -1,12 +1,23 @@
 import React from 'react';
 import ProjectItem from './project-item.js';
 import { Project, projects } from '../data/projects.js';
+import { Container, Divider, Grid } from '@mui/material';
 
 export default function ProjectList(): React.JSX.Element {
-    const list: React.JSX.Element[] = projects.map((p: Project): React.JSX.Element => <ProjectItem project={p} />);
+    const list: React.JSX.Element[] = projects.map((p: Project): React.JSX.Element => (
+        <Grid item className='w-full md:w-[49%] bg-slate-600 rounded-2xl p-2'>
+            <ProjectItem project={p} />
+        </Grid>
+    ));
     return (
-        <>
-            {list}
-        </>
+        <Container className='pt-4 pb-8'>
+            <Container className='py-4 bg-slate-800 rounded-2xl'>
+                <h2>Projects</h2>
+                <Divider variant='fullWidth'/>
+                <Grid container className='gap-4 md:grid-cols-2 pl-2 py-4'>
+                    {list}
+                </Grid>
+            </Container>
+        </Container>
     );
 }

@@ -11,11 +11,23 @@ export function getBuildSettings(buildTypeFolder, options) {
         force: true
       }),
       copy({
-        assets: {
-          from: [ './src/index.html' ],
-          to: [ './index.html' ],
-          watch: true
-        }
+        assets: [
+          {
+            from: [ './src/index.html' ],
+            to: [ './index.html' ],
+            watch: true
+          },
+          {
+            from: [ './dist/index.css' ],
+            to: [ './index.css' ],
+            watch: true
+          },
+          {
+            from: [ './assets/*' ],
+            to: [ './assets' ],
+            watch: true
+          }
+        ]
       })
     ],
     ...options
