@@ -4,6 +4,7 @@ import Info from './components/info.js';
 import ProjectList from './components/project-list.js';
 import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
+import { Background } from './components/background.js';
 
 const rootElement: HTMLElement | null = document.getElementById('root');
 const root = createRoot(rootElement!);
@@ -35,6 +36,7 @@ root.render(
         <StyledEngineProvider injectFirst>
             <ThemeProvider theme={theme}>
                 <CssBaseline />
+                <Background />
                 <Info />
                 <ProjectList />
             </ThemeProvider>

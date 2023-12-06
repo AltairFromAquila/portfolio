@@ -1,10 +1,10 @@
-import { Box, Container } from '@mui/material';
+import { Container } from '@mui/material';
 import React from 'react';
 
 export default function Info(): React.JSX.Element {
     return (
         <Container className='flex relative pt-8 pb-4'>
-            <img src='assets/info-bg.jpg' className='w-full rounded-2xl' />
+            <img src='assets/info-bg.jpg' className='w-full rounded-2xl opacity-90' />
             {/* <div className='absolute bottom-0 left-[2%] right-1/2 bg-[#17020619] backdrop-blur-sm rounded-2xl'> */}
             <div className='absolute bottom-4 left-[2%] right-1/2'>
                 <div className='relative mx-[1em]'>
@@ -16,7 +16,9 @@ export default function Info(): React.JSX.Element {
             </div>
             <div className='absolute bottom-4 left-1/2 right-[2%]'>
                 <p className='relative mx-[1em] drop-shadow-[2.4px_2.4px_0.1rem_rgba(0,0,0,1)] text-right'>
-                    <a href='https://www.instagram.com/the_kumomi/' style={{color:'white', textDecoration:'none'}}>📷@the_kumomi</a>
+                    <a style={{color:'white', textDecoration:'none'}} href='https://www.instagram.com/the_kumomi/' target='_blank' rel='noopener noreferrer'>
+                        📷@the_kumomi
+                    </a>
                 </p>
             </div>
         </Container>
