@@ -10,11 +10,11 @@ export default function ProjectList(): React.JSX.Element {
         </Grid>
     ));
     return (
-        <Container className='pt-4 pb-8'>
-            <Container className='py-4 bg-slate-800/60 rounded-2xl backdrop-blur-[2px]'>
-                <h2>Projects</h2>
-                <Divider variant='fullWidth'/>
-                <Grid container className='gap-4 md:grid-cols-2 pl-2 py-4'>
+        <Container className='pb-8'>
+            <Container className='pt-1 pb-4 bg-slate-800/60 rounded-2xl backdrop-blur-[2px]'>
+                <h2 className='mb-0'>Projects</h2>
+                <Divider className='mb-4' variant='fullWidth'/>
+                <Grid container className='flex flex-row flex-wrap justify-between gap-y-4'>
                     {list}
                 </Grid>
             </Container>

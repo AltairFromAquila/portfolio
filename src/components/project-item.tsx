@@ -22,7 +22,7 @@ export default function ProjectItem({ project }: { project: Project }): React.JS
                     <Grid item xs={10} style={{color:'gainsboro'}}>
                         {roleToString(project.role)}
                     </Grid>
-                    <Grid item xs={2} className='text-right' style={{color:'gainsboro'}}>
+                    <Grid item xs={2} className='text-right self-end' style={{color:'gainsboro'}}>
                         {project.year}
                     </Grid>
                 </Grid>
